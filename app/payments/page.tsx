@@ -163,7 +163,7 @@ function PaymentsPage() {
   const dashboardMetrics: MetricCardData[] = [
     {
       title: "Total Income",
-      value: `₦${metrics?.totalIncome || "₦0"}`,
+      value: `₦${metrics?.totalIncome || "0"}`,
       change: "+12.5%",
       isIncrease: true,
       icon: FaWallet,
@@ -172,7 +172,7 @@ function PaymentsPage() {
     },
     {
       title: "Total Outflow",
-      value: `₦${metrics?.totalOutflow || "₦0"}`,
+      value: `₦${metrics?.totalOutflow || "0"}`,
       change: "+8.2%",
       isIncrease: true,
       icon: FaClipboardList,
@@ -182,7 +182,7 @@ function PaymentsPage() {
 
     {
       title: "Net Profit",
-      value: `₦${metrics?.netProfit || "₦0"}`,
+      value: `₦${metrics?.netProfit || "0"}`,
       change: "-2.3%",
       isIncrease: false,
       icon: FaClock,
@@ -191,7 +191,7 @@ function PaymentsPage() {
     },
     {
       title: "Total Expenses",
-      value: `₦${metrics?.totalOutflow || "₦0"}`,
+      value: `₦${metrics?.totalOutflow || "0"}`,
       change: "+8.2%",
       isIncrease: true,
       icon: FaClipboardList,

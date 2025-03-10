@@ -32,7 +32,7 @@ function Dashboard() {
   const dashboardMetrics: MetricCardData[] = [
     {
       title: "Total Income",
-      value: `₦${metrics?.totalIncome || "₦0"}`,
+      value: `₦${metrics?.totalIncome || "0"}`,
       change: "+12.5%",
       isIncrease: true,
       icon: FaWallet,
@@ -41,7 +41,7 @@ function Dashboard() {
     },
     {
       title: "Total Outflow",
-      value: `₦${metrics?.totalOutflow || "₦0"}`,
+      value: `₦${metrics?.totalOutflow || "0"}`,
       change: "+8.2%",
       isIncrease: true,
       icon: FaClipboardList,
@@ -51,7 +51,7 @@ function Dashboard() {
 
     {
       title: "Net Profit",
-      value: `₦${metrics?.netProfit || "₦0"}`,
+      value: `₦${metrics?.netProfit || "0"}`,
       change: "-2.3%",
       isIncrease: false,
       icon: FaClock,
@@ -60,7 +60,7 @@ function Dashboard() {
     },
     {
       title: "Total Expenses",
-      value: `₦${metrics?.totalOutflow || "₦0"}`,
+      value: `₦${metrics?.totalOutflow || "0"}`,
       change: "+8.2%",
       isIncrease: true,
       icon: FaClipboardList,
