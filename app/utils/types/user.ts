@@ -1,4 +1,4 @@
-export interface UsersFormData {
+export interface UserFormData {
   name: string;
   phone: string;
   workshop: string;
