@@ -15,7 +15,7 @@ function OnlineBooking() {
   const JobOrderMetrics: MetricCardData[] = [
     {
       title: "Total Online Orders",
-      value: "142",
+      value: "0",
       change: "+12.5%",
       isIncrease: true,
       icon: FaWallet,
@@ -24,7 +24,7 @@ function OnlineBooking() {
     },
     {
       title: "Ongoing",
-      value: "12",
+      value: "0",
       change: "+8.2%",
       isIncrease: true,
       icon: FaClipboardList,
@@ -33,7 +33,7 @@ function OnlineBooking() {
     },
     {
       title: "Compeleted",
-      value: "30",
+      value: "0",
       change: "+5.1%",
       isIncrease: true,
       icon: FaCheckCircle,
@@ -42,7 +42,7 @@ function OnlineBooking() {
     },
     {
       title: "Pending",
-      value: "100",
+      value: "0",
       change: "-2.3%",
       isIncrease: false,
       icon: FaClock,
