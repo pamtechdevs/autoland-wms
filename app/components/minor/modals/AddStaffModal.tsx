@@ -14,7 +14,12 @@ import {
   Radio,
   Text,
   useToast,
+  InputGroup, 
+  InputRightElement, 
+  IconButton
 } from "@chakra-ui/react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
 import { StaffFormData } from "@/app/utils/types/staff";
 import { addStaff } from "@/app/utils/services/staff";
 import {
@@ -22,6 +27,8 @@ import {
   StyledModal,
   StyledSelect,
 } from "../styling/technicians.styles";
+
+
 
 interface AddStaffModalProps {
   isOpen: boolean;
@@ -39,6 +46,7 @@ export const AddStaffModal = ({
   const toast = useToast();
   const [formData, setFormData] = useState<StaffFormData>(initialData);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
@@ -150,6 +158,9 @@ export const AddStaffModal = ({
               <FormLabel fontSize="sm" color="gray.600">
                 Password
               </FormLabel>
+              <InputGroup>
+              
+              
               <StyledInput
                 name="password"
                 type="password"
@@ -159,6 +170,24 @@ export const AddStaffModal = ({
                 _placeholder={{ color: "rgb(172, 175, 179)" }}
                 color="black"
               />
+               <InputRightElement width="4.5rem">
+                <IconButton
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  h="1.75rem"
+                  size="sm"
+                  onClick={() => setShowPassword(!showPassword)}
+                  bg="transparent"
+                  _hover={{ bg: "transparent" }}
+                  icon={
+                    showPassword ? (
+                      <FaEyeSlash color="white" />
+                    ) : (
+                      <FaEye color="white" />
+                    )
+                  }
+                />
+              </InputRightElement>
+              </InputGroup>
             </FormControl>
 
             <HStack spacing={4}>

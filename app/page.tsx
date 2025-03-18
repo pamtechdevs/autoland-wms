@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Box, Input, Button, Heading, Flex, useToast } from "@chakra-ui/react";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
+import { Box, Input, Button, Heading, Flex, useToast, InputGroup, InputRightElement, IconButton } from "@chakra-ui/react";
 import bgLogin from "./assets/login_bg.jpg";
 import GlassCard from "./components/minor/GlassCard";
 import { useRouter } from "next/navigation";
@@ -13,6 +14,7 @@ export default function Home() {
   const router = useRouter();
   const toast = useToast();
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false)
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -112,18 +114,38 @@ export default function Home() {
               required
             />
 
-            <Input
-              name="password"
-              value={formData.password}
-              onChange={handleInputChange}
-              placeholder="Password"
-              type="password"
-              bg="transparent"
-              color="white"
-              border="1px solid"
-              borderColor="gray.200"
-              required
-            />
+            <InputGroup>
+              <Input
+                name="password"
+                value={formData.password}
+                onChange={handleInputChange}
+                placeholder="Password"
+                type={showPassword ? "text" : "password"}
+                bg="transparent"
+                color="white"
+                border="1px solid"
+                borderColor="gray.200"
+                required
+                pr="4.5rem"
+              />
+              <InputRightElement width="4.5rem">
+                <IconButton
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                  h="1.75rem"
+                  size="sm"
+                  onClick={() => setShowPassword(!showPassword)}
+                  bg="transparent"
+                  _hover={{ bg: "transparent" }}
+                  icon={
+                    showPassword ? (
+                      <FaEyeSlash color="white" />
+                    ) : (
+                      <FaEye color="white" />
+                    )
+                  }
+                />
+              </InputRightElement>
+            </InputGroup>
 
             <Button
               type="submit"
