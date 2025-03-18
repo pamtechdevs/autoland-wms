@@ -163,11 +163,11 @@ export const AddStaffModal = ({
               
               <StyledInput
                 name="password"
-                type="password"
+                type={showPassword ? "text" : "password"}
                 value={formData.password}
                 onChange={handleInputChange}
                 placeholder="Enter password"
-                _placeholder={{ color: "rgb(172, 175, 179)" }}
+                _placeholder={{ color: "rgb(92, 96, 101)" }}
                 color="black"
               />
                <InputRightElement width="4.5rem">
