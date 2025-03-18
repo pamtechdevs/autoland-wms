@@ -180,9 +180,9 @@ export const AddStaffModal = ({
                   _hover={{ bg: "transparent" }}
                   icon={
                     showPassword ? (
-                      <FaEyeSlash color="white" />
+                      <FaEyeSlash color="black" />
                     ) : (
-                      <FaEye color="white" />
+                      <FaEye color="black" />
                     )
                   }
                 />
